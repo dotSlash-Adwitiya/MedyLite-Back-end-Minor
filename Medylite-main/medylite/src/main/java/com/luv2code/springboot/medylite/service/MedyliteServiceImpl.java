@@ -274,6 +274,8 @@ public class MedyliteServiceImpl implements MedyliteService {
 	    return "medicine is removed";
 	}
 
+	//* Check if the phone and password is correct entered by the USER
+	//* Security API
 	public Users checkPhoneAndPass(String phoneNo, String pass) {
 		Users user1 = userRepository.findByPassword(pass);
 		Users user2 = userRepository.findByPhoneNo(phoneNo);
@@ -284,6 +286,8 @@ public class MedyliteServiceImpl implements MedyliteService {
 			return null;
 	}
 
+	//* Check if the phone and password is correct entered by the CHEMIST
+	//* Security API
 	@Override
 	public Chemist checkPhoneAndPassForChemist(String phoneNo, String pass) {
 
